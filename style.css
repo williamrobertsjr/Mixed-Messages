@@ -1,0 +1,24 @@
+body {
+    margin:0;
+}
+
+.header {
+    background-image: url('/Users/billyroberts/Documents/Codecademy/Mixed Messages/images/amnesiac_cover.jpg');
+    background-color: rgba(0,0,0,50%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center 80%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+h1 {
+    color: #fff;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
+.container {
+    padding: 0 30px;
+}
