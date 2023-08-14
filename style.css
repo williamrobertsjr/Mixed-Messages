@@ -3,7 +3,7 @@ body {
 }
 
 .header {
-    background-image: url('/Users/billyroberts/Documents/Codecademy/Mixed Messages/images/amnesiac_cover.jpg');
+    background-image: url('images/amnesiac_cover.jpg');
     background-color: rgba(0,0,0,50%);
     background-blend-mode: overlay;
     background-size: cover;
