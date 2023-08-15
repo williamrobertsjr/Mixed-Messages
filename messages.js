@@ -1,4 +1,4 @@
-// set up array
+// set up songs array
 const songs = [
     {
         id: 1,
@@ -9,7 +9,7 @@ const songs = [
     {
         id: 2,
         track: "Pyramid Song",
-        album: "Amensiac"
+        album: "Amnesiac"
     },
     {
         id: 3,
@@ -100,6 +100,59 @@ const songs = [
         id: 20,
         track: "Packt Like Sardines in a Crushd Tin Box",
         album: "Amnesiac"
-    },
+    }
 ]
 
+
+
+const songButton = document.getElementById('song-btn')
+const results = document.getElementById('results')
+const trackDiv = document.getElementById('track')
+const albumDiv = document.getElementById('album')
+const coverDiv = document.getElementById('cover')
+
+songButton.addEventListener('click', function(e) {
+    // store random number to be used as seletor for random track,album from array
+    let randomNum = Math.floor(Math.random() * 21)
+    let track = songs[randomNum].track
+    let album = songs[randomNum].album
+    let albumPic
+    console.log(album)
+    // if or switch case to determine what album cover is shown
+    switch(album) {
+        case 'The Bends':
+            albumPic = 'the_bends';
+            break; 
+        case 'Ok Computer':
+            albumPic = 'ok_computer';
+            break;
+        case 'Kid A':
+            albumPic = 'kid_a';
+            break;   
+        case 'Amnesiac':
+            albumPic = 'amnesiac';
+            break;
+        case 'Hail to the Thief':
+            albumPic = 'hail_to_the_thief';
+            break;
+        case 'In Rainbows':
+            albumPic = 'in_rainbows';
+            break;
+        case 'King of Limbs':
+            albumPic = 'king_of_limbs';
+            break;
+        case 'A Moon Shaped Pool':
+            albumPic = 'a_moon_shaped_pool';
+            break;  
+        default: 
+            albumPic = 'none'
+            break;
+    }
+
+
+    // When user clicks display new song and album cover
+    trackDiv.innerHTML = `<h2>${track}</h2>`
+    albumDiv.innerHTML = `<h2>${album}</h2>`
+    coverDiv.innerHTML = `<img src="/images/${albumPic}.jpeg" />`
+    // results.innerHTML = songs[0].track
+})
